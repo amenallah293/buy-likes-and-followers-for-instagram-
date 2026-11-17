@@ -4,9 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>متابعين ولايكات إنستغرام</title>
-<meta name="theme-color" content="#6D28D9">
-<link rel="manifest" href='data:application/manifest+json,{"name":"متابعين ولايكات إنستغرام","short_name":"متابعين","start_url":"./","scope":"./","display":"standalone","background_color":"%23F4F2FB","theme_color":"%236D28D9","icons":[{"src":"data:image/svg%2Bxml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 rx=%2722%27 fill=%27%236D28D9%27/%3E%3Ctext x=%2750%27 y=%2766%27 font-size=%2752%27 text-anchor=%27middle%27 fill=%27white%27 font-family=%27sans-serif%27%3E%E2%98%85%3C/text%3E%3C/svg%3E","sizes":"192x192 512x512","type":"image/svg+xml","purpose":"any"}]}'>
-<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%236D28D9'/%3E%3Ctext x='50' y='66' font-size='52' text-anchor='middle' fill='white' font-family='sans-serif'%3E%E2%98%85%3C/text%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;800&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#F4F2FB;--surface:#fff;--ink:#1B1740;--muted:#5E5A80;--accent:#6D28D9;--on-accent:#fff;--line:#DDD8F0;--ok:#0F7B5F;
@@ -25,9 +22,7 @@ h1{font-size:clamp(34px,9vw,52px);line-height:1.15;font-weight:800;margin:0 0 14
 .tab:focus-visible,.buy:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 .list{display:grid;gap:10px}
 .list[hidden]{display:none}
-.row{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;position:relative}
-.row.pop{border-color:var(--accent)}
-.pop-tag{position:absolute;inset-inline-start:14px;top:-11px;background:var(--accent);color:var(--on-accent);font-size:12px;font-weight:700;padding:2px 10px;border-radius:999px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
 .row b{font-size:22px;font-weight:800}
 .row small{display:block;color:var(--muted);font-size:14px}
 .price{font-weight:800;font-size:20px;margin-inline-start:auto}
@@ -51,40 +46,12 @@ dialog input[type=text]:focus-visible{outline:3px solid var(--accent);outline-of
 #d-res.ok{color:var(--ok)}
 .chk{display:flex;gap:10px;align-items:flex-start;margin-top:12px;font-size:15px}
 .chk input{margin-top:6px}
-.hours{display:inline-flex;gap:6px;align-items:center;color:var(--muted);font-size:14px;margin:0 0 20px}
-.faq{margin-top:32px}
-.faq h2{font-size:20px;margin:0 0 12px}
-.faq details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:8px}
-.faq summary{font-weight:700;cursor:pointer;list-style:none}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";float:left;font-weight:800;color:var(--accent)}
-.faq details[open] summary::after{content:"−"}
-.faq p{margin:10px 0 0;color:var(--muted);font-size:15px}
-.steps{display:grid;gap:10px;margin:24px 0}
-.step{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
-.step b{flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:flex;align-items:center;justify-content:center;font-size:14px}
-.step span{font-size:15px}
-.topbar{display:flex;justify-content:flex-end;gap:8px;margin-bottom:6px}
-.icon-btn{background:var(--surface);border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:8px 12px;font:inherit;font-size:14px;cursor:pointer;display:flex;align-items:center;gap:6px}
-.toast{position:fixed;inset-inline:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:12px 16px;border-radius:12px;font-size:14px;text-align:center;opacity:0;pointer-events:none;transition:opacity .25s;z-index:20}
-.toast.show{opacity:1}
 </style>
 </head>
 <body>
 <main>
-<div class="topbar">
-<button class="icon-btn" id="theme-btn" type="button">🌓 الوضع</button>
-<button class="icon-btn" id="share-btn" type="button">🔗 شارك الصفحة</button>
-</div>
 <h1>متابعون ولايكات لحسابك على إنستغرام</h1>
 <p class="lead">اختر الباقة التي تناسبك، ثم تواصل معنا عبر واتساب لإتمام الطلب. الدفع ببطاقات شحن الرصيد. لا نطلب كلمة سر حسابك أبداً.</p>
-
-
-<div class="steps">
-<div class="step"><b>1</b><span>اختر الباقة المناسبة من المتابعين أو اللايكات.</span></div>
-<div class="step"><b>2</b><span>اكتب اسم حسابك وأرسل الطلب عبر واتساب.</span></div>
-<div class="step"><b>3</b><span>ادفع ببطاقة شحن رصيد واستلم طلبك خلال ساعات.</span></div>
-</div>
 
 <div class="tabs" role="tablist">
 <button class="tab" role="tab" id="t-f" aria-selected="true" aria-controls="p-f">المتابعون</button>
@@ -101,17 +68,8 @@ dialog input[type=text]:focus-visible{outline:3px solid var(--accent);outline-of
 <li>قد تنقص الأعداد مع الوقت، فنوضح لك سياسة التعويض عند الطلب.</li>
 </ul>
 
-<div class="faq">
-<h2>أسئلة شائعة</h2>
-<details><summary>كم تستغرق الطلبات؟</summary><p>يبدأ التسليم عادةً خلال ساعات من تأكيد الدفع، ويتم بشكل تدريجي لا دفعة واحدة.</p></details>
-<details><summary>هل تحتاجون كلمة سر حسابي؟</summary><p>لا. نحتاج فقط اسم الحساب العام، ولا نطلب كلمة السر أبداً.</p></details>
-<details><summary>ماذا لو نقص العدد بعد التسليم؟</summary><p>راسلنا على واتساب ونوضح لك سياسة التعويض حسب كل حالة.</p></details>
-<details><summary>هل يجب أن يكون حسابي عاماً؟</summary><p>نعم، يجب ألا يكون خاصاً حتى يتم التسليم.</p></details>
-</div>
-
 <footer>هذه الخدمة غير تابعة لإنستغرام أو Meta. استخدامها قد يخالف شروط المنصة.</footer>
 </main>
-<div class="toast" id="toast"></div>
 
 <dialog id="welcome">
 <h2>طريقة الدفع</h2>
@@ -126,8 +84,8 @@ dialog input[type=text]:focus-visible{outline:3px solid var(--accent);outline-of
 <button class="btn" id="d-check" type="button">تحقق من الحساب</button>
 <div id="d-res" aria-live="polite"></div>
 <div id="d-next" hidden>
-<label class="chk"><input type="checkbox" class="d-ok2" id="d-ok"><span>أنا متأكد</span></label>
-<label class="chk"><input type="checkbox" class="d-ok2" id="d-ok2"><span>أنا لست روبوت</span></label>
+<a class="btn alt" id="d-open" target="_blank" rel="noopener">افتح الحساب على إنستغرام</a>
+<label class="chk"><input type="checkbox" id="d-ok"><span>تأكدت أن الحساب موجود وأنه عام</span></label>
 <a class="btn" id="d-send" target="_blank" rel="noopener" aria-disabled="true">أرسل الطلب عبر واتساب</a>
 </div>
 <button class="btn alt" id="d-close" type="button">إلغاء</button>
@@ -135,37 +93,23 @@ dialog input[type=text]:focus-visible{outline:3px solid var(--accent);outline-of
 
 <script>
 // عدّل الأرقام والأسعار هنا، وضع رقم واتساب الخاص بك مكان PHONE (مع رمز الدولة بدون +)
-var PHONE="21699810230";
+var PHONE="21690215150";
 var PRICE_UNIT=" دينار";
 var packs={
- f:[[100,2],[200,4],[300,6],[400,7],[500,9],[1000,15],[2500,35],[5000,65],[10000,120],[20000,220]],
- l:[[100,1],[200,2],[300,3],[400,4],[500,5],[1000,10],[2000,20],[5000,50],[10000,100]]
+ f:[[100,2],[250,5],[500,9],[1000,15],[2500,35],[5000,65],[10000,120],[20000,220]],
+ l:[[100,1],[200,2],[500,5],[1000,10],[2000,20],[5000,50],[10000,100]]
 };
 var nf=new Intl.NumberFormat("fr-FR");
 function render(k,id){
  var name=k==="f"?"متابع":"لايك";
- var pop={f:1000,l:1000};
  document.getElementById(id).innerHTML=packs[k].map(function(p){
   var msg=p[0]+" "+name;
-  var isPop=p[0]===pop[k];
-  return '<div class="row'+(isPop?' pop':'')+'">'+(isPop?'<span class="pop-tag">الأكثر طلباً</span>':'')+'<div><b>'+nf.format(p[0])+'</b><small>'+name+'</small></div>'+
+  return '<div class="row"><div><b>'+nf.format(p[0])+'</b><small>'+name+'</small></div>'+
   '<span class="price">'+nf.format(p[1])+PRICE_UNIT+'</span>'+
   '<button class="buy" data-q="'+msg+'">اطلب</button></div>';
  }).join("");
 }
 render("f","p-f");render("l","p-l");
-function toast(msg){var t=$("toast");t.textContent=msg;t.className="toast show";setTimeout(function(){t.className="toast"},2600)}
-try{var sv=localStorage.getItem("theme");if(sv)document.documentElement.setAttribute("data-theme",sv)}catch(e){}
-if($("theme-btn"))$("theme-btn").onclick=function(){
- var cur=document.documentElement.getAttribute("data-theme");
- var next=cur==="dark"?"light":"dark";
- document.documentElement.setAttribute("data-theme",next);
- try{localStorage.setItem("theme",next)}catch(e){}
-};
-if($("share-btn"))$("share-btn").onclick=function(){
- var t="شاهد هذه الصفحة لشراء متابعين ولايكات إنستغرام: "+location.href;
- window.open("https://wa.me/?text="+encodeURIComponent(t),"_blank");
-};
 function show(w){
  var f=w==="f";
  document.getElementById("t-f").setAttribute("aria-selected",f);
@@ -188,7 +132,7 @@ document.addEventListener("click",function(e){
  var b=e.target.closest("button.buy");if(!b)return;
  pick=b.dataset.q;$("d-pick").textContent="الطلب: "+pick;
  $("d-user").value="";$("d-res").textContent="";$("d-res").className="";
- $("d-next").hidden=true;$("d-ok").checked=false;$("d-ok2").checked=false;$("d-send").setAttribute("aria-disabled","true");
+ $("d-next").hidden=true;$("d-ok").checked=false;$("d-send").setAttribute("aria-disabled","true");
  dlg.showModal();
 });
 $("d-close").onclick=function(){dlg.close()};
@@ -199,13 +143,11 @@ $("d-check").onclick=function(){
  if(!u){r.className="err";r.textContent="اكتب اسم الحساب أولاً.";return}
  if(!valid(u)){r.className="err";r.textContent="الاسم غير صالح. استخدم حروفاً إنجليزية وأرقاماً ونقطة وشرطة سفلية فقط، بحد أقصى 30 حرفاً.";return}
  user=u;r.className="ok";
- r.textContent="صيغة @"+u+" صحيحة.";
+ r.textContent="صيغة @"+u+" صحيحة. افتح الحساب للتأكد أنه موجود وعام.";
+ $("d-open").href="https://www.instagram.com/"+encodeURIComponent(u)+"/";
  $("d-next").hidden=false;sendLink();
 };
-$("d-send").addEventListener("click",function(){setTimeout(function(){toast("👌 فتح واتساب. إن لم يفتح، اضغط مرة أخرى.")},400)});
-function syncOk(){var ok=$("d-ok").checked&&$("d-ok2").checked;$("d-send").setAttribute("aria-disabled",ok?"false":"true")}
-$("d-ok").onchange=syncOk;
-$("d-ok2").onchange=syncOk;
+$("d-ok").onchange=function(){$("d-send").setAttribute("aria-disabled",this.checked?"false":"true")};
 document.getElementById("t-f").onclick=function(){show("f")};
 document.getElementById("t-l").onclick=function(){show("l")};
 </script>
